@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	/*Відомо, що 1 дюйм дорівнює 2.54 см. Розробити додаток,
+	який переводить дюйми в сантиметри і навпаки.
+	Діалог з користувачем реалізувати через систему меню*/
+	const float inch_in_santimetres = 2.54;
+	float inch;
+	int sm,Direction=0;
+	cout << "Enter the command of convertation" << endl;
+	cout << "\t 1- Santimetres/inch\n"
+		<< "\t 2- inch/santimetres\n";
+	cin >> Direction;
+	switch (Direction)
+	{
+	case 1:
+		cout << "Enter the santimetres:" << endl;
+		cin >> sm;
+		cout <<"You convertation saintimetres in Inch, and have: " << sm / inch_in_santimetres << endl;
+		break;
+	case 2:
+		cout << "Enter the inch:" << endl;
+		cin >> inch;
+		cout << "You convertation Inch in Santimetres, and have: " << inch * inch_in_santimetres << endl;
+		break;
+	default:
+		break;
+	}
